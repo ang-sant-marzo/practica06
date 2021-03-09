@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'practica06';
+  texto: string = 'ciudad de Madrid';
+  id: any = 1;
+  fecha: object = new Date();
+
+  ngOnInit() {
+    this.id = '000' + this.id;
+  }
+
+
 }
