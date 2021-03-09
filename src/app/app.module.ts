@@ -4,12 +4,14 @@ import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
 
 import { AppComponent } from './app.component';
+import { NumeroPipe } from './pipes/numero.pipe';
 
 registerLocaleData(localeEs);
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NumeroPipe
   ],
   imports: [
     BrowserModule

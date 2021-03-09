@@ -57,4 +57,65 @@
       <!-- Disponible opción "medium" y "short" -->
     </tr>
   </table>
+  <h1>Pipe decimal</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor sin pipe</th>
+      <th>Valor con pipe</th>
+    </tr>
+    <tr>
+      <td>Dos decimales</td>
+      <td>{{importe}}</td>
+      <td>{{importe | number: ".2-2"}}</td>
+      <!-- Nº Mínimo decimales.NºMáximo decimales -->
+    </tr>
+  </table>
+  <h1>Pipe currency</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor sin pipe</th>
+      <th>Valor con pipe</th>
+    </tr>
+    <tr>
+      <td>Moneda euro</td>
+      <td>{{importe}}</td>
+      <td>{{importe | currency: 'EUR'}}</td>
+    </tr>
+  </table>
+  <h1>Pipe json</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor sin pipe</th>
+      <th>Valor con pipe</th>
+    </tr>
+    <tr>
+      <td>Objeto</td>
+      <td>{{actor}}</td>
+      <td>{{actor | json}}</td>
+    </tr>
+  </table>
+  <h1>Ejemplo de pipe propio</h1>
+  <hr>
+  <table>
+    <tr>
+      <th>Pipe</th>
+      <th>Valor sin pipe</th>
+      <th>Valor con pipe</th>
+    </tr>
+    <tr>
+      <td>Pipe para números</td>
+      <td>{{importe}}</td>
+      <td>
+        {{importe | numero: decimales : 'Euro'}}
+        <button class="mini" (click)="setDecimales(1)">+</button>
+        <button class="mini" (click)="setDecimales(-1)">-</button>
+      </td>
+    </tr>
+  </table>
 </div>
